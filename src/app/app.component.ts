@@ -6,5 +6,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'calculadora';
+  title = 'Calculadora Basiquísima';
+  num1: number;
+  num2: number;
+  resultado: number;
+
+  constructor() {
+    this.num1 = 0;
+    this.num2 = 0;
+    this.resultado = 0;
+
+  }
+
+  sumar() {
+    this.resultado = this.num1 + this.num2;
+  }
+
+  restar() {
+    this.resultado = this.num1 - this.num2;
+  }
+
+  multiplicar() {
+    this.resultado = this.num1 * this.num2;
+  }
+
+  dividir() {
+    if (this.num2 == 0) {
+      this.resultado = 0;
+    } else {
+      this.resultado = this.num1 / this.num2;
+    }
+  }
+
 }
