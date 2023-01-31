@@ -32,7 +32,7 @@ export class AppComponent {
 
   dividir() {
     if (this.num2 == 0) {
-      this.resultado = 0;
+      this.resultado = Number("Error");
     } else {
       this.resultado = this.num1 / this.num2;
     }
